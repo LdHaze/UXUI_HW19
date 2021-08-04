@@ -1,0 +1,275 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 1% 5%;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    width: 150px;
+    justify-content: flex-start;
+}
+
+.headerNav {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #103559;
+}
+
+.headerNav p {
+    cursor: pointer;
+}
+
+#intro {
+    margin: 1% 5%;
+    height: 200px;
+}
+
+div.myTextIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #E2126F;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+p.titleArea {
+    font-size: 16px;
+    color: #E2126F;
+    font-weight: 500;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 22px;
+    color: #103559;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 2;
+    margin: 0;
+}
+
+#workGridArea {
+    margin: 0px 5%;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-rows: 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "Project1 Project2 Project3";
+}
+
+.workProject1 {
+    grid-area: Project1;
+    background-color: rgba(226, 18, 111, 0.1);
+    margin: 0;
+    margin-right: 10px;
+    display: grid;
+    align-content: end;
+}
+
+.workProject2 {
+    grid-area: Project2;
+    background-color: rgba(226, 18, 111, 0.1);
+    margin-right: 10px;
+    margin-left: 10px;
+    display: grid;
+    align-content: end;
+}
+
+.workProject3 {
+    grid-area: Project3;
+    background-color: rgba(226, 18, 111, 0.1);
+    margin: 0;
+    margin-left: 10px;
+    display: grid;
+    align-content: end;
+}
+
+div.heading {
+    display: grid;
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    height: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 5px solid #E2126F;
+}
+
+.work {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px; 
+    height: 120px;
+    background-color:#103559;
+}
+
+#footerAbout {
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    background-color:#103559;
+}
+
+.footerNav {
+    display: flex;
+    width: 30%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;;
+    cursor: pointer;
+}
+
+
+/* Code for About Me Page */
+.mainAbout {
+    background-color: rgba(226, 18, 111, 0.1); 
+    height: 600px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.aboutMe {
+    display: flex;
+    margin: 5%;
+    border: 5px solid #E2126F;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.myPic {
+    float: left;
+    height: 365px;
+    padding: 40px 20px 40px 40px;
+    align-items: center;
+}
+
+.aboutContent {
+    text-align: left;
+    padding: 40px 40px 40px 20px;
+}
+
+button {
+    background-color: #E2126F;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.socialIcons {
+    margin-bottom: 20px;
+}
+
+p.moreInfo {
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+/* Code for multiple screen options */
+
+@media only screen and (max-width: 600px) {
+    .headerNav {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 5%;
+    }
+    
+    p.titleArea {
+        font-size: 14px;
+        letter-spacing: 4px;
+        word-spacing: 0px;
+    }
+    
+    h2 {
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 2;
+    }
+
+    #workGridArea {
+        margin: 1% 5%;
+        grid-template-rows: 400px 400px 400px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "Project1" 
+        "Project2" 
+        "Project3";
+    }
+
+    .workProject1 {
+        margin-right: 0;
+    }
+
+    .workProject2 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .workProject3 {
+        margin-left: 0;
+    }
+
+    .footerNav {
+        width: 80%;       
+    }
+    
+    .myPic {
+        display: none;
+    }
+    
+    .aboutContent {
+        text-align: center;
+        padding: 20px;
+    }
+
+    p.moreInfo {
+        font-size: 16px;
+    }
+
+    button {
+        margin-bottom: 20px;
+    }
+}
