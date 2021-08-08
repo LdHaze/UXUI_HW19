@@ -3,6 +3,35 @@ body {
     margin: 0;
 }
 
+#animation {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
+    background-color: white;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoArea {
+    width: 120px;
+    height: 200px;
+    background: url("../Images/LH_Logo_SpriteImage-01.png") left;
+    background-size: cover;
+    animation: preloader 1s steps(5) 3;
+}
+
+
+@keyframes preloader {
+    100% { background-position: -600px; }
+}
+
+
+
+
+
 #navBar {
     display: flex;
     flex-direction: row;
@@ -14,6 +43,7 @@ body {
     display: flex;
     width: 150px;
     justify-content: flex-start;
+    cursor: pointer;
 }
 
 .headerNav {
@@ -151,10 +181,33 @@ div.heading {
     cursor: pointer;
 }
 
+/* Code for Hover States */
+.active, .header:hover {
+    border-bottom: 3px solid #E2126F;
+}
+
+.footerNav p:hover {
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: white;
+    border: 3px solid #E2126F;
+    border-radius: 5px;
+    color: #E2126F;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+
+
+  
 
 /* Code for About Me Page */
 .mainAbout {
-    background-color: rgba(226, 18, 111, 0.1); 
     height: 600px;
     padding: 25px;
     display: flex;
@@ -166,26 +219,25 @@ div.heading {
 .aboutMe {
     display: flex;
     margin: 5%;
-    border: 5px solid #E2126F;
-    border-radius: 30px;
-    background-color: white;
 }
 
 .myPic {
     float: left;
-    height: 365px;
+    height: 500px;
     padding: 40px 20px 40px 40px;
-    align-items: center;
+    align-self: center;
 }
 
 .aboutContent {
     text-align: left;
+    align-content: center;
     padding: 40px 40px 40px 20px;
+    margin: auto;
 }
 
 button {
     background-color: #E2126F;
-    border: none;
+    border: 3px solid #E2126F;
     border-radius: 5px;
     color: white;
     padding: 15px;
@@ -241,15 +293,18 @@ p.moreInfo {
 
     .workProject1 {
         margin-right: 0;
+        margin-bottom: 20px;
     }
 
     .workProject2 {
         margin-right: 0;
         margin-left: 0;
+        margin-bottom: 20px;
     }
 
     .workProject3 {
         margin-left: 0;
+        margin-bottom: 20px;
     }
 
     .footerNav {
